@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Albertt | Portafolio Multidisciplinario</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .filter-btn.active {
+            background-color: #db2777;
+            color: white;
+            border-color: #db2777;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-pink-500 selection:text-white">
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-slate-950 border-b border-slate-800 py-20 px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(219,39,119,0.1),transparent_50%)]"></div>
+        <div class="max-w-6xl mx-auto relative z-10 text-center md:text-left md:flex md:items-center md:justify-between">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-2">JORGE ALBERTT</h1>
+                <p class="text-xl md:text-2xl text-pink-500 font-medium mb-4">Sistemas • Identidad Comercial • Gastronomía</p>
+                <p class="text-slate-400 max-w-xl text-base leading-relaxed">
+                    Desarrollador de soluciones tecnológicas y arquitecto de conceptos comerciales. Especializado en la optimización operativa, branding para e-commerce y optimización de entornos de alto rendimiento en Valencia, Venezuela.
+                </p>
+            </div>
+            <div class="mt-8 md:mt-0 flex flex-wrap justify-center md:justify-end gap-3">
+                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs font-semibold uppercase tracking-wider border border-slate-700">Linux Mint / Pop!_OS</span>
+                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs font-semibold uppercase tracking-wider border border-slate-700">Ollama IA</span>
+                <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs font-semibold uppercase tracking-wider border border-slate-700">Food Cost</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN INTERACTIVE HUB -->
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <!-- CONTROLES DE FILTRADO (INTERACTIVIDAD JS) -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button onclick="filterProjects('all')" class="filter-btn active px-5 py-2 rounded-lg font-medium text-sm border border-slate-700 text-slate-300 hover:border-pink-500 transition-all duration-300">
+                ⚡ Todos los Proyectos
+            </button>
+            <button onclick="filterProjects('sistemas')" class="filter-btn px-5 py-2 rounded-lg font-medium text-sm border border-slate-700 text-slate-300 hover:border-pink-500 transition-all duration-300">
+                🖥️ Soporte & Sistemas
+            </button>
+            <button onclick="filterProjects('ecommerce')" class="filter-btn px-5 py-2 rounded-lg font-medium text-sm border border-slate-700 text-slate-300 hover:border-pink-500 transition-all duration-300">
+                💼 Emprendimiento & E-com
+            </button>
+            <button onclick="filterProjects('gastronomia')" class="filter-btn px-5 py-2 rounded-lg font-medium text-sm border border-slate-700 text-slate-300 hover:border-pink-500 transition-all duration-300">
+                🍳 Gastronomía Profesional
+            </button>
+        </div>
+
+        <!-- REJILLA DE PROYECTOS -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- PROYECTO 1 -->
+            <div class="project-card bg-slate-950 border border-slate-800 rounded-xl p-6 transition-all duration-300 hover:border-slate-700 hover:-translate-y-1" data-category="sistemas">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest bg-blue-950/50 px-2.5 py-1 rounded border border-blue-900/50">Sistemas & Almacén</span>
+                    <span class="text-xs text-slate-500">2026</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Operaciones & Soporte — Mayor Center</h3>
+                <p class="text-slate-400 text-sm mb-4">Gestión integral de flujos financieros en caja, control de inventarios y mantenimiento técnico de la infraestructura informática bajo estándares rigurosos.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Sistemas TI</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Control de Caja</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Logística</span>
+                </div>
+            </div>
+
+            <!-- PROYECTO 2 -->
+            <div class="project-card bg-slate-950 border border-slate-800 rounded-xl p-6 transition-all duration-300 hover:border-slate-700 hover:-translate-y-1" data-category="ecommerce">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-xs font-bold text-pink-400 uppercase tracking-widest bg-pink-950/50 px-2.5 py-1 rounded border border-pink-900/50">E-Commerce</span>
+                    <span class="text-xs text-slate-500">2026</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Amora Cosmética — Facebook Marketplace</h3>
+                <p class="text-slate-400 text-sm mb-4">Lanzamiento de marca y optimización de piezas gráficas publicitarias de alto impacto en formato "combo" para maximizar la conversión digital de maquillaje.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Branding</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Marketplace</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Estrategia Comercial</span>
+                </div>
+            </div>
+
+            <!-- PROYECTO 3 -->
+            <div class="project-card bg-slate-950 border border-slate-800 rounded-xl p-6 transition-all duration-300 hover:border-slate-700 hover:-translate-y-1" data-category="gastronomia">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-950/50 px-2.5 py-1 rounded border border-amber-900/50">Gastronomía</span>
+                    <span class="text-xs text-slate-500">2026</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Estructuración de Negocio — "La Calle"</h3>
+                <p class="text-slate-400 text-sm mb-4">Desarrollo de menús urbanos competitivos integrando ingeniería culinaria con un análisis riguroso de estructura de costos (Food Cost) y recetas estándar.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Costeo Gastronómico</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Fast Food</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Menú Engineering</span>
+                </div>
+            </div>
+
+            <!-- PROYECTO 4 -->
+            <div class="project-card bg-slate-950 border border-slate-800 rounded-xl p-6 transition-all duration-300 hover:border-slate-700 hover:-translate-y-1" data-category="sistemas">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest bg-blue-950/50 px-2.5 py-1 rounded border border-blue-900/50">Hardware</span>
+                    <span class="text-xs text-slate-500">Avanzado</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Restauración de Arquitectura de Hardware</h3>
+                <p class="text-slate-400 text-sm mb-4">Diagnóstico y reconfiguración de un equipo iMac A1419 sin panel interno para salida de video externa estable utilizando configuraciones avanzadas de Fusion Drive.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">iMac A1419</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Fusion Drive</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Troubleshooting BIOS</span>
+                </div>
+            </div>
+
+            <!-- PROYECTO 5 -->
+            <div class="project-card bg-slate-950 border border-slate-800 rounded-xl p-6 transition-all duration-300 hover:border-slate-700 hover:-translate-y-1" data-category="sistemas">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest bg-blue-950/50 px-2.5 py-1 rounded border border-blue-900/50">SysAdmin</span>
+                    <span class="text-xs text-slate-500">Entornos</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Optimización de Sistemas Operativos Linux</h3>
+                <p class="text-slate-400 text-sm mb-4">Administración, personalización y control por CLI de distribuciones avanzadas orientadas al rendimiento extremo y productividad (Mint, Pop!_OS, Garuda, CachyOS).</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Bash / Terminal</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Garuda Dragonized</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Performance</span>
+                </div>
+            </div>
+
+            <!-- PROYECTO 6 -->
+            <div class="project-card bg-slate-950 border border-slate-800 rounded-xl p-6 transition-all duration-300 hover:border-slate-700 hover:-translate-y-1" data-category="sistemas">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-xs font-bold text-blue-400 uppercase tracking-widest bg-blue-950/50 px-2.5 py-1 rounded border border-blue-900/50">IA</span>
+                    <span class="text-xs text-slate-500">Mayo 2026</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Despliegue de IA Local — Proyecto JARVIS</h3>
+                <p class="text-slate-400 text-sm mb-4">Configuración y codificación de un asistente personal local utilizando el motor Ollama integrado de forma nativa en un entorno Linux Mint.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Ollama</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">LLM Local</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Linux Automation</span>
+                </div>
+            </div>
+
+            <!-- PROYECTO 7 -->
+            <div class="project-card bg-slate-950 border border-slate-800 rounded-xl p-6 transition-all duration-300 hover:border-slate-700 hover:-translate-y-1" data-category="gastronomia">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-950/50 px-2.5 py-1 rounded border border-amber-900/50">I+D Culinario</span>
+                    <span class="text-xs text-slate-500">Estandarización</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Formulación y Desarrollo de Productos Lácteos</h3>
+                <p class="text-slate-400 text-sm mb-4">Investigación de procesos físico-químicos culinarios para el desarrollo artesanal de queso crema estable y optimización de recetas de alta consistencia.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Queso Crema</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Técnicas de Cocina</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Producción</span>
+                </div>
+            </div>
+
+            <!-- PROYECTO 8 -->
+            <div class="project-card bg-slate-950 border border-slate-800 rounded-xl p-6 transition-all duration-300 hover:border-slate-700 hover:-translate-y-1" data-category="ecommerce">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-xs font-bold text-pink-400 uppercase tracking-widest bg-pink-950/50 px-2.5 py-1 rounded border border-pink-900/50">Logística & RRSS</span>
+                    <span class="text-xs text-slate-500">Mayo 2026</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Dirección Logística Masiva — Clique Venezuela</h3>
+                <p class="text-slate-400 text-sm mb-4">Coordinación de redes sociales, control de accesos/boletería y movilización terrestre coordinada de fanáticos desde Valencia hasta Caracas para evento oficial.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Eventos</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Logística de Transporte</span>
+                    <span class="text-xs bg-slate-900 text-slate-300 px-2 py-1 rounded border border-slate-800">Comunidades</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- INTERACTIVE JAVASCRIPT INJECTION -->
+    <script>
+        function filterProjects(category) {
+            // Actualizar estado de los botones
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            // Filtrar las tarjetas con una animación suave de opacidad
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => card.style.opacity = '1', 10);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
